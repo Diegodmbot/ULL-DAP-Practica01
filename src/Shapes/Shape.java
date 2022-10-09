@@ -1,7 +1,5 @@
 package Shapes;
 
-public interface Shape {
-    void draw();
-    double getArea();
-    double getPerimeter();
+public abstract class Shape implements Operations {
+    public abstract void  draw();
 }

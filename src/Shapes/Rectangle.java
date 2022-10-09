@@ -1,6 +1,6 @@
 package Shapes;
 
-public class Rectangle implements Shape {
+public class Rectangle extends Shape {
     private int width;
     private int height;
     public Rectangle(int width, int height) {
@@ -8,7 +8,7 @@ public class Rectangle implements Shape {
         this.height = height;
     }
     public void draw() {
-        System.out.println("Shapes.Rectangle");
+        System.out.println("Rectangle");
     }
     public double getArea() {
         return width * height;

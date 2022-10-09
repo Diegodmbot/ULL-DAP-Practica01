@@ -1,6 +1,6 @@
 package Shapes;
 
-public class Triangle implements Shape{
+public class Triangle extends Shape {
     private int side1;
     private int side2;
     private int side3;
@@ -10,7 +10,7 @@ public class Triangle implements Shape{
         this.side3 = side3;
     }
     public void draw() {
-        System.out.println("Shapes.Triangle)");
+        System.out.println("Triangle");
     }
     // Heron's formula
     public double getArea() {
