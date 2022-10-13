@@ -2,47 +2,56 @@
 
 title __DAP-PRACTICA01's Class Diagram__\n
 
-  namespace  {
-    class Main {
+  namespace practica01 {
+    class practica01.Main {
     }
   }
   
 
-  namespace  {
-    namespace hapes {
-      class Shapes.Circle {
+  namespace practica01 {
+    namespace Shapes {
+      class practica01.Shapes.Circle {
       }
     }
   }
   
 
-  namespace  {
-    namespace hapes {
-      class Shapes.Rectangle {
+  namespace practica01 {
+    namespace Shapes {
+      interface practica01.Shapes.Operations {
       }
     }
   }
   
 
-  namespace  {
-    namespace hapes {
-      interface Shapes.Shape {
+  namespace practica01 {
+    namespace Shapes {
+      class practica01.Shapes.Rectangle {
       }
     }
   }
   
 
-  namespace  {
-    namespace hapes {
-      class Shapes.Triangle {
+  namespace practica01 {
+    namespace Shapes {
+      abstract class practica01.Shapes.Shape {
       }
     }
   }
   
 
-  Shapes.Circle .up.|> Shapes.Shape
-  Shapes.Rectangle .up.|> Shapes.Shape
-  Shapes.Triangle .up.|> Shapes.Shape
+  namespace practica01 {
+    namespace Shapes {
+      class practica01.Shapes.Triangle {
+      }
+    }
+  }
+  
+
+  practica01.Shapes.Circle -up-|> practica01.Shapes.Shape
+  practica01.Shapes.Rectangle -up-|> practica01.Shapes.Shape
+  practica01.Shapes.Shape .up.|> practica01.Shapes.Operations
+  practica01.Shapes.Triangle -up-|> practica01.Shapes.Shape
 
 
 right footer

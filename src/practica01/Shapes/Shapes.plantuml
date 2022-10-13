@@ -2,8 +2,9 @@
 
 title __SHAPES's Class Diagram__\n
 
+  namespace practica01 {
     namespace Shapes {
-      class Shapes.Circle {
+      class practica01.Shapes.Circle {
           - radius : int
           + Circle()
           + draw()
@@ -11,9 +12,22 @@ title __SHAPES's Class Diagram__\n
           + getPerimeter()
       }
     }
+  }
+  
 
+  namespace practica01 {
     namespace Shapes {
-      class Shapes.Rectangle {
+      interface practica01.Shapes.Operations {
+          {abstract} + getArea()
+          {abstract} + getPerimeter()
+      }
+    }
+  }
+  
+
+  namespace practica01 {
+    namespace Shapes {
+      class practica01.Shapes.Rectangle {
           - height : int
           - width : int
           + Rectangle()
@@ -22,17 +36,21 @@ title __SHAPES's Class Diagram__\n
           + getPerimeter()
       }
     }
+  }
+  
 
+  namespace practica01 {
     namespace Shapes {
-      interface Shapes.Shape {
+      abstract class practica01.Shapes.Shape {
           {abstract} + draw()
-          {abstract} + getArea()
-          {abstract} + getPerimeter()
       }
     }
+  }
+  
 
+  namespace practica01 {
     namespace Shapes {
-      class Shapes.Triangle {
+      class practica01.Shapes.Triangle {
           - side1 : int
           - side2 : int
           - side3 : int
@@ -43,12 +61,13 @@ title __SHAPES's Class Diagram__\n
           - getSemiPerimeter()
       }
     }
-
+  }
   
 
-  Shapes.Circle .up.|> Shapes.Shape
-  Shapes.Rectangle .up.|> Shapes.Shape
-  Shapes.Triangle .up.|> Shapes.Shape
+  practica01.Shapes.Circle -up-|> practica01.Shapes.Shape
+  practica01.Shapes.Rectangle -up-|> practica01.Shapes.Shape
+  practica01.Shapes.Shape .up.|> practica01.Shapes.Operations
+  practica01.Shapes.Triangle -up-|> practica01.Shapes.Shape
 
 
 right footer

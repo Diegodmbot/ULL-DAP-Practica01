@@ -1,4 +1,4 @@
-package Shapes;
+package practica01.Shapes;
 
 public class Rectangle extends Shape {
     private int width;

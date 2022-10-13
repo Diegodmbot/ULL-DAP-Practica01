@@ -1,4 +1,4 @@
-package Shapes;
+package practica01.Shapes;
 
 public class Circle extends Shape {
     private int radius;

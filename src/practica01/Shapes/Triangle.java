@@ -1,4 +1,4 @@
-package Shapes;
+package practica01.Shapes;
 
 public class Triangle extends Shape {
     private int side1;
@@ -14,13 +14,10 @@ public class Triangle extends Shape {
     }
     // Heron's formula
     public double getArea() {
-        double s = getSemiPerimeter();
+        double s = getPerimeter()/2;
         return  Math.sqrt(s * (s - side1) * (s - side2) * (s - side3));
     }
     public double getPerimeter() {
         return side1 + side2 + side3;
-    }
-    private int getSemiPerimeter() {
-        return (side1 + side2 + side3) / 2;
     }
 }
