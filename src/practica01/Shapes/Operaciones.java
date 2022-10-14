@@ -1,6 +1,6 @@
 package practica01.Shapes;
 
-public interface Operations {
+public interface Operaciones {
     double getArea();
     double getPerimeter();
 }
